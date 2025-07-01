@@ -2,7 +2,7 @@ services:
   - type: web
     name: image-search-backend
     env: python
-    buildCommand: ""
+    buildCommand: "pip install -r requirements.txt"
     startCommand: "python backend_search_api.py"
     plan: free
     rootDir: backend
