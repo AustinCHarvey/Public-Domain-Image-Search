@@ -10,7 +10,7 @@ function App() {
     if (!query.trim()) return;
     setLoading(true);
     try {
-      const response = await fetch(`/api/search?q=${encodeURIComponent(query)}&public_only=${publicOnly}`);
+      const response = await fetch(`https://public-domain-image-search.onrender.com/api/search?q=${encodeURIComponent(query)}&public_only=${publicOnly}`);
       const data = await response.json();
       setResults(data.results || []);
     } catch (err) {
